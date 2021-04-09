@@ -1,0 +1,28 @@
+namespace: sebthebert
+name: elastic
+version: 0.0.2
+
+readme: README.md
+
+authors:
+- Sebastien Thebert <sebthebert@gmail.com>
+
+description: Ansible COllection for Elastic products
+
+license_file: https://github.com/sebthebert/ansible-collection-elastic/blob/main/LICENSE
+
+# A list of tags you want to associate with the collection for indexing/searching. A tag name has the same character
+# requirements as 'namespace' and 'name'
+tags: ["elastic", "beats"]
+
+dependencies: {}
+
+repository: https://github.com/sebthebert/ansible-collection-elastic.git
+
+# The URL to any online docs
+documentation: http://docs.example.com
+
+# The URL to the homepage of the collection/project
+homepage: http://example.com
+
+issues: https://github.com/sebthebert/ansible-collection-elastic/issues
