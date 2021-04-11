@@ -55,11 +55,15 @@ setup.template.settings:
 #setup.dashboards.url:
 
 # =================================== Kibana ===================================
-
+{% if kibana.host %}
+setup.kibana:
+  host: "{{ kibana.host }}"
+  space.id: "{{ kibana.space.id }}"
+{% else %}
 # Starting with Beats version 6.0.0, the dashboards are loaded via the Kibana API.
 # This requires a Kibana endpoint configuration.
 setup.kibana:
-
+  
   # Kibana Host
   # Scheme and port can be left out and will be set to the default (http and 5601)
   # In case you specify and additional path, the scheme is required: http://localhost:5601/path
@@ -70,6 +74,8 @@ setup.kibana:
   # ID of the Kibana Space into which the dashboards should be loaded. By default,
   # the Default Space will be used.
   #space.id:
+{% endif %}
+
 
 # =============================== Elastic Cloud ================================
 
