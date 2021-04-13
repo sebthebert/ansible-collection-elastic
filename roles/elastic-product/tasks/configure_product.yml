@@ -1,0 +1,6 @@
+---
+- name: "elastic - Configure product '{{ elastic_product }}' ({{ elastic_product_conf_file }})"
+  template:
+    src: "{{ template_file }}"
+    dest: "{{ elastic_product_conf_file }}"
+    force: yes

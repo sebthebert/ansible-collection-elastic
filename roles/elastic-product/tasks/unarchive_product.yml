@@ -1,0 +1,17 @@
+---
+- name: "elastic-product - Install required package 'tar'"
+  package:
+    name: tar
+    state: present
+
+- name: "elastic-product - Create '{{ elastic_product_dest_dir }}' directory"
+  file:
+    name: "{{ elastic_product_dest_dir }}"
+    state: directory
+ 
+- name: "elastic-product - Unarchive '{{ elastic_product_download_dir }}/{{ elastic_product_download_file }}' to '{{ elastic_product_dest_dir }}'"
+  unarchive: 
+    src: "{{ elastic_product_download_dir }}/{{ elastic_product_download_file }}"
+    dest: "{{ elastic_product_dest_dir }}"
+    extra_opts:
+      - "--strip-components=1"

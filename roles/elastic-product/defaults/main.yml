@@ -1,0 +1,8 @@
+---
+elastic_product_download_dir: /tmp/{{ elastic_product }}
+elastic_product_download_file: "{{ elastic_product }}-{{ elastic_version }}-{{ elastic_os }}-{{ elastic_archi }}.tar.gz"
+elastic_product_download_url: "{{ elastic_download_url }}/{{ ('beat' in elastic_product) | ternary('beats/', '') }}{{ elastic_product }}/{{ elastic_product_download_file }}"
+
+elastic_product_dest_dir: /opt/{{ elastic_product }}
+elastic_product_bin_file: "{{ elastic_product_dest_dir }}/{{ elastic_product }}"
+elastic_product_conf_file: "{{ elastic_product_dest_dir }}/{{ ('beat' in elastic_product) | ternary('', 'config/') }}{{ elastic_product }}.yml"

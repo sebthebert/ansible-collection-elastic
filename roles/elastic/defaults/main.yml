@@ -4,15 +4,4 @@ elastic_archi: x86_64
 elastic_version: 7.12.0
 
 elastic_artifacts_url: https://artifacts.elastic.co
-
-elastic_dest_dir: /opt/{{ elastic_product }}
-elastic_download_dir: /tmp/{{ elastic_product }}
-elastic_bin_file: "{{ elastic_dest_dir }}/{{ elastic_product }}"
-elastic_conf_file: "{{ elastic_dest_dir }}/{{ elastic_product }}.yml"
-
 elastic_download_url: "{{ elastic_artifacts_url }}/downloads"
-elastic_download_beats_url: "{{ elastic_download_url }}/beats"
-elastic_download_file: "{{ elastic_product }}-{{ elastic_version }}-{{ elastic_os }}-{{ elastic_archi }}.tar.gz"
-elastic_download_beats_product_url: "{{ elastic_download_beats_url }}/{{ elastic_product }}/{{ elastic_download_file }}"
-# /filebeat/filebeat-7.12.0-linux-x86_64.tar.gz
-# elastic_repository_gpg_key_url: "{{ elastic_repository_url }}/GPG-KEY-elasticsearch"
