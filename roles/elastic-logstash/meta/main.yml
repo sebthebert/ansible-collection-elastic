@@ -1,0 +1,7 @@
+---
+galaxy_info:
+  author: Sebastien Thebert
+
+dependencies: 
+  - elastic
+  - elastic-product
