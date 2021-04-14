@@ -4,7 +4,8 @@
     name: "{{ elastic_product_download_dir }}"
     state: directory
 
-- name: "elastic - Download product '{{ elastic_product }}' from '{{ elastic_product_download_url }}'"
+- name: "elastic-product - Download product '{{ elastic_product }}' from '{{ elastic_product_download_url }}'"
   get_url:
     url: "{{ elastic_product_download_url }}"
     dest: "{{ elastic_product_download_dir }}/{{ elastic_product_download_file }}"
+    checksum: "sha512:{{ elastic_product_download_url }}.sha512"

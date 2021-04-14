@@ -153,9 +153,9 @@ setup.template.settings:
 #setup.dashboards.url:
 
 # =================================== Kibana ===================================
-{% if kibana.host %}
+{% if kibana.server %}
 setup.kibana:
-  host: "{{ kibana.host }}"
+  host: "{{ kibana.server.host }}:{{ kibana.server.port }}"
   space.id: "{{ kibana.space.id }}"
 {% else %}
 # Starting with Beats version 6.0.0, the dashboards are loaded via the Kibana API.
