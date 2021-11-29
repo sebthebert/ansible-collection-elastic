@@ -1,0 +1,34 @@
+---
+- name: "elastic_product - Create '{{ elastic_group }}' group"
+  ansible.builtin.group:
+    name: "{{ elastic_user }}"
+    system: yes
+    state: present
+  tags:
+    - user
+
+- name: "elastic_product - Create '{{ elastic_user }}' user"
+  ansible.builtin.user:
+    name: "{{ elastic_user }}"
+    group: "{{ elastic_group }}"
+    system: yes
+    state: present
+  tags:
+    - user
+
+- name: "elastic_product - Include Task 'download_product.yml'"
+  include_tasks: download_product.yml
+  tags:
+    - download
+
+- name: "elastic_product - Include Task 'unarchive_product.yml'"
+  include_tasks: unarchive_product.yml
+  tags:
+    - unarchive
+
+- name: "elastic_product - Include Task 'configure_product.yml'"
+  include_tasks: configure_product.yml
+  vars:
+    template_file: "templates/{{ elastic_product }}.yml.j2"
+  tags:
+    - configure

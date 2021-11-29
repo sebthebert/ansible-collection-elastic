@@ -1,0 +1,15 @@
+---
+# elasticsearch:
+#   hosts:
+#   username:
+#   password: 
+
+kibana:
+  index: ".kibana"
+  server:
+    host: localhost
+    port: 5601
+  space:
+    id: test
+# logstash:
+#   hosts:

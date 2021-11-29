@@ -1,0 +1,4 @@
+---
+- include_role:
+    name: elastic_product
+    tasks_from: install.yml

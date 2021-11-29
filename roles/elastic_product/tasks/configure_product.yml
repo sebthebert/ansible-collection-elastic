@@ -1,0 +1,8 @@
+---
+- name: "elastic_product - Configure product '{{ elastic_product }}' ({{ elastic_product_conf_file }})"
+  ansible.builtin.template:
+    src: "{{ template_file }}"
+    dest: "{{ elastic_product_conf_file }}"
+    force: yes
+    owner: "{{ elastic_user }}"
+    group: "{{ elastic_group }}"

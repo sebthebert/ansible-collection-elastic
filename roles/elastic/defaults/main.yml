@@ -1,7 +1,10 @@
 ---
 elastic_os: linux
 elastic_archi: x86_64
-elastic_version: 7.12.0
+elastic_version: 7.15.1
 
 elastic_artifacts_url: https://artifacts.elastic.co
 elastic_download_url: "{{ elastic_artifacts_url }}/downloads"
+
+elastic_user: elastic
+elastic_group: elastic

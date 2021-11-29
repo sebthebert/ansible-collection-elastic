@@ -1,0 +1,14 @@
+---
+- hosts: localhost
+  become: yes
+  gather_facts: no
+
+  roles:
+    - elastic_beat_auditbeat
+    - elastic_beat_filebeat
+    - elastic_beat_journalbeat
+    - elastic_beat_metricbeat
+    - elastic_beat_packetbeat
+    # - elastic_elasticsearch
+    # - elastic_kibana
+    # - elastic_logstash
