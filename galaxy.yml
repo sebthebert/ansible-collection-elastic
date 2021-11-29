@@ -7,7 +7,7 @@ readme: README.md
 authors:
 - Sebastien Thebert <sebthebert@gmail.com>
 
-description: Ansible COllection for Elastic products
+description: Ansible Collection for Elastic products
 
 license_file: https://github.com/sebthebert/ansible-collection-elastic/blob/main/LICENSE
 
