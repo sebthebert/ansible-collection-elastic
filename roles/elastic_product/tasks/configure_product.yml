@@ -6,3 +6,4 @@
     force: yes
     owner: "{{ elastic_user }}"
     group: "{{ elastic_group }}"
+    mode: '660'

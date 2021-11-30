@@ -1,4 +1,5 @@
 ---
-- include_role:
+- name: "elastic_beat_metricbeat - include_role: elastic_product / install.yml"
+  include_role:
     name: elastic_product
     tasks_from: install.yml
